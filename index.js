@@ -20,7 +20,7 @@ app.get('/', async (req, res) => {
     const response = await axios.get('https://secrets-api.appbrewery.com/random');
     res.render('index.ejs', {secret:  response.data.secret, user: response.data.username});
   } catch (error) {
-    console.error(error)
+    console.error(error.response.data);
   }
 });
 
