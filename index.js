@@ -18,7 +18,7 @@ app.get('/', async (req, res) => {
 // secret and the username of the secret.
   try {
     const response = await axios.get('https://secrets-api.appbrewery.com/random');
-    res.render('index.ejs', {secret: JSON.stringify( response.data.secret), user: JSON.stringify(response.data.username)});
+    res.render('index.ejs', {secret:  response.data.secret, user: response.data.username});
   } catch (error) {
     console.error(error)
   }
