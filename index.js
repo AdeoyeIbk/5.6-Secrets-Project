@@ -1,10 +1,15 @@
 // HINTS:
 // 1. Import express and axios
+import express from 'express';
+import axios from 'axios';
+import ejs from 'ejs';  
 
 // 2. Create an express app and set the port number.
+const app = express();
+const port = 5000;
 
 // 3. Use the public folder for static files.
-
+app.use(express.static('public'));
 // 4. When the user goes to the home page it should render the index.ejs file.
 
 // 5. Use axios to get a random secret and pass it to index.ejs to display the
