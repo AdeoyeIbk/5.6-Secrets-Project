@@ -14,6 +14,7 @@
 <body>
   <h1>What's your secret?</h1>
   <div class="card">
+    <% if (locals.secret) { %>
     <p>
       <%= secret %>
     </p>
@@ -21,6 +22,8 @@
   <p class="user">
     <%= user %>
   </p>
+  <% }; %>
+  
 </body>
 
 </html>
